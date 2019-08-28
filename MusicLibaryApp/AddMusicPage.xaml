@@ -1,0 +1,92 @@
+﻿<Page
+    x:Class="MusicLibaryApp.AddMusicPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicLibaryApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60*" />
+                <ColumnDefinition Width="130*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="86*" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Add Music" FontWeight="Bold"  />
+            <TextBlock Grid.Row="1" Text="Title:"  />
+            <TextBlock Grid.Row="2" Text="Album:"/>
+            <TextBlock Grid.Row="3" Text="Singer:"  />
+            <TextBlock Grid.Row="4" Text="Release Date:" />
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="CoverImage Path:" />
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Music Path:"/>
+            <TextBox Height="40" Name="EnterAlbum" Grid.Row="2" Grid.Column="1" Margin="0,0,20,0" />
+            <TextBox Height="40" Name="EnterSinger"  Grid.Row="3" Grid.Column="1" Margin="0,0,20,0"  />
+            <TextBox Height="40" Name="EnterTitle" Grid.Row="1" Grid.Column="1" Margin="0,0,20,0" />
+            <TextBox Height="40" Name="EnteryDate"  Grid.Row="4" Grid.Column="1" Margin="0,0,20,0"  />
+            <Grid Grid.Row="5" Grid.Column="1" Margin="0,0,20,0" VerticalAlignment="Center"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <TextBox Name="ImagePathString" Grid.Column="0" Margin="0,0,10,0"/>
+                <Button Content="Add" Name="AddImageButton" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,0,0,0" Click="AddImageButton_Click" />
+            </Grid>
+            <Grid Grid.Row="6" Grid.Column="1" Margin="0,0,20,0" VerticalAlignment="Center"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="77*" />
+                    <ColumnDefinition Width="460*"/>
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <TextBox Name="MusicPathString" Grid.Column="0" Margin="0,0,9.8,0" Grid.ColumnSpan="2"/>
+                <Button Content="Add" Name="AddMusicButton" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10.2,0,-0.2,0" Click="AddMusicButton_Click" />
+            </Grid>
+            <Grid Grid.Row="7" Grid.Column="1" >
+                <StackPanel Orientation="Horizontal" Margin = "0, 0, 0, 0">
+
+                    <TextBlock Text="Cover Image" Width =" 100" Height="50"/>
+                    <Image x:Name="image" HorizontalAlignment="Left" Height="200" Margin="0,0,0,0" VerticalAlignment="Top" Width="200" Stretch="Uniform"/>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="17*" />
+                <RowDefinition Height="85*" />
+                <RowDefinition Height="42*"/>
+
+            </Grid.RowDefinitions>
+            <Button Grid.Row="1" Name="BackButton" Click="BackButton_Click" Margin="15,25,0,0" Content="Back" Height="65" Width="140" VerticalAlignment="Top"/>
+        </Grid>
+        <Button x:Name="SaveButton" Content="Save" Click="SaveButton_Click" Grid.Column="1" Margin="15,5,0,15" VerticalAlignment="Top"  Height="65" Width="140"/>
+    </Grid>
+</Page>
