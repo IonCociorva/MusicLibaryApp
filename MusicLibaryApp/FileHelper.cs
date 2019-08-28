@@ -18,6 +18,7 @@ namespace MusicLibaryApp
             File.AppendAllLines(textFile.Path, new string[] { content });
 
             // await textWriter.StoreAsync();
+            // await textWriter.StoreAsync();
         }
         public async static Task<string> ReadTextFileAsync(string filename)
         {

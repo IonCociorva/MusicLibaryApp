@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 namespace MusicLibaryApp
+    //IDataStorage.cs
 {
     internal interface IDatastorage
     {
@@ -10,6 +11,8 @@ namespace MusicLibaryApp
 
         MusicEntry ViewMusic(string musicTitle);
 
+        //list music entry
         List<MusicEntry> ListMusic();
+
     }
 }
